@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepe - Anatomy: Liver (यकृत) 🩺</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ==================== ROOT VARIABLES ==================== */
+        :root {
+            --primary: #fb923c; /* orange-400 */
+            --primary-light: #fed7aa; /* orange-200 */
+            --primary-dark: #f97316; /* orange-500 */
+            --secondary: #ea580c; /* orange-600 */
+            --text-dark: #1f2937;
+            --text-medium: #4b5563;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --gradient-accent: linear-gradient(135deg, #fff7ed 0%, #fff 100%);
+        }
+
+        /* ==================== GLOBAL STYLES ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+        }
+
+        /* ==================== SLIDES CONTAINER ==================== */
+        .slides-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+
+        /* ==================== SLIDE STYLES ==================== */
+        .slide {
+            width: 100%;
+            background: #ffffff;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            padding: 40px;
+            overflow: hidden;
+            border-radius: 24px;
+            border-top: 8px solid;
+            border-image: linear-gradient(90deg, var(--primary), var(--secondary)) 1;
+            min-height: auto;
+        }
+        
+        .slide::after {
+            content: 'Prepe';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(251, 146, 60, 0.04);
+            z-index: 0;
+            pointer-events: none;
+            text-transform: uppercase;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-light);
+            background-color: #fff7ed;
+            padding: 6px 16px;
+            border-radius: 20px;
+            z-index: 2;
+            border: 1px solid var(--primary-light);
+        }
+
+        /* ==================== HEADER ==================== */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 35px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary-dark);
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -1px;
+        }
+        
+        .slide-title {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--text-dark);
+            text-align: right;
+            position: relative;
+            padding-bottom: 12px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.2;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        /* ==================== CONTENT AREA ==================== */
+        .slide-content {
+            flex-grow: 1;
+            display: flex;
+            gap: 35px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-column {
+            flex: 1.8;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .side-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* ==================== TYPOGRAPHY ==================== */
+        h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0 0 18px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-light);
+            display: flex;
+            align-items: center;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-column > ul > li {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.2s ease;
+            border-left: 5px solid var(--primary);
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .main-column > ul > li:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
+        }
+        
+        .point-title {
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .point-title .icon {
+            margin-right: 12px;
+            font-size: 22px;
+            background: #fff7ed;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: var(--primary-dark);
+        }
+        
+        .point-desc,
+        .point-list {
+            font-size: 16px;
+            color: var(--text-medium);
+            padding-left: 10px;
+            line-height: 1.6;
+        }
+
+        .point-list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            border: none !important;
+            background: none !important;
+            padding: 0 0 0 18px !important;
+            box-shadow: none !important;
+        }
+
+        .point-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .point-example {
+            font-size: 15px;
+            color: var(--text-dark);
+            margin-top: 12px;
+            padding: 12px 16px;
+            border: 1px dashed var(--primary);
+            background: #fffbeb;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        /* ==================== INFO CARDS ==================== */
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-light);
+        }
+
+        .info-card h4 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            color: var(--text-dark);
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-card p {
+            font-size: 15px;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* ==================== TABLES ==================== */
+        .mini-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .mini-table th,
+        .mini-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .mini-table th {
+            background: #fff7ed;
+            color: var(--text-dark);
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .mini-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .mini-table tr:nth-child(even) {
+            background: #fafaf9;
+        }
+
+        /* ==================== BADGES & TAGS ==================== */
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            color: var(--text-medium);
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .badge span {
+            color: var(--primary);
+        }
+
+        /* ==================== TIMELINE & FLOW ==================== */
+        .timeline {
+            position: relative;
+            padding-left: 25px;
+            margin-top: 15px;
+            border-left: 2px dashed var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid #fff;
+            box-shadow: 0 0 0 1px var(--border-color);
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+        
+        .flow-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .flow-step {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            position: relative;
+        }
+        
+        .flow-step:not(:last-child)::after {
+            content: '↓';
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* ==================== IMAGES ==================== */
+        .img-container {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .img-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 15px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* ==================== HERO SLIDE SPECIALS ==================== */
+        .hero-slide {
+            text-align: center;
+            justify-content: center;
+            background: radial-gradient(circle at top right, #fff7ed, #ffffff);
+        }
+        
+        .hero-header {
+            margin-bottom: 40px;
+        }
+        
+        .hero-title {
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--text-dark);
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .stat-box {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        
+        .stat-val {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-lbl {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .slide-footer {
+            display: flex;
+            gap: 10px;
+            padding-top: 25px;
+            border-top: 2px solid #f1f5f9;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-tag {
+            background: #f1f5f9;
+            color: var(--text-medium);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid transparent;
+        }
+        
+        .footer-tag.highlight {
+            background: #fff7ed;
+            color: var(--primary-dark);
+            border-color: var(--primary-light);
+        }
+
+        /* ==================== FINAL SLIDE ==================== */
+        .final-slide {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f5f3ff 100%);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .final-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
+            width: 100%;
+            border: 2px solid #ffffff;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .slide-content { flex-direction: column; }
+            .hero-stats { grid-template-columns: 1fr 1fr; }
+            .slide-title { font-size: 32px; text-align: left; }
+            .hero-title { font-size: 42px; }
+            .slide { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="slides-container">
+
+        <!-- ==================== SLIDE 1: HERO & INTRODUCTION ==================== -->
+        <section class="slide hero-slide">
+            <div class="slide-number">1 / 11</div>
+            <div class="brand" style="position: absolute; top: 30px; left: 30px;">Prepe</div>
+            
+            <div class="hero-header">
+                <h1 class="hero-title">Anatomy of Liver<br><span style="color: var(--primary);">यकृत (The Chemical Factory)</span></h1>
+                <p class="hero-subtitle">शरीर की सबसे बड़ी ग्रंथि और Metabolic Powerhouse 🏭</p>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="stat-val">1.5 kg</span>
+                    <span class="stat-lbl">वजन (Weight)</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">Red</span>
+                    <span class="stat-lbl">गहरा लाल रंग</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">Right</span>
+                    <span class="stat-lbl">दाहिनी तरफ</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">Regen</span>
+                    <span class="stat-lbl">दोबारा बनने की शक्ति</span>
+                </div>
+            </div>
+
+            <div class="slide-content" style="margin-top: 40px; text-align: left;">
+                <div class="main-column">
+                    <h3>Definition & Introduction (परिचय)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">👑</span>Largest Gland (सबसे बड़ी फैक्ट्री)</div>
+                            <div class="point-list">
+                                Liver हमारे शरीर का सबसे बड़ा अंदरूनी अंग (Internal Organ) है।
+                                यह एक ठोस (Solid) अंग है और इसका आकार एक कील (Wedge) जैसा होता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">📍</span>Exact Location (यह कहाँ स्थित है?)</div>
+                            <div class="point-list">
+                                यह पेट (Abdomen) के <strong>ऊपरी दाहिने हिस्से (Right side)</strong> में पसलियों (Ribs) के नीचे सुरक्षित रहता है।
+                                Diaphragm (सांस लेने वाली मांसपेशी) इसे फेफड़ों से अलग करती है।
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Quick Features (मुख्य बातें)</h4>
+                        <table class="mini-table">
+                            <tr>
+                                <td><strong>रंग (Color)</strong></td>
+                                <td>गहरा लाल-भूरा (Reddish-Brown)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>बनावट (Texture)</strong></td>
+                                <td>मुलायम (Soft) और लचीला</td>
+                            </tr>
+                            <tr>
+                                <td><strong>वजन (Weight)</strong></td>
+                                <td>लगभग 1.5 kg (वयस्कों में)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>कवर (Covering)</strong></td>
+                                <td>Glisson's Capsule (सुरक्षा कवच)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer" style="justify-content: center;">
+                <div class="footer-tag highlight">⬇️ नीचे Scroll करके विस्तार से पढ़ें</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 2: ASSOCIATED ORGANS ==================== -->
+        <section class="slide">
+            <div class="slide-number">2 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Neighbors of Liver 🧩<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">आस-पास के पड़ोसी अंग</span></div>
+            </div>
+            
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Surfaces & Relations (कौन कहाँ है?)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">⬆️</span>Superior Surface (ऊपर की तरफ)</div>
+                            <div class="point-list">
+                                <strong>Diaphragm:</strong> यह Liver के ठीक ऊपर एक छत की तरह होता है।
+                                इसके ऊपर हमारे फेफड़े (Lungs) और दिल (Heart) स्थित होते हैं।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">⬇️</span>Inferior Surface (नीचे की तरफ)</div>
+                            <div class="point-list">
+                                Liver के नीचे कई अंग इससे चिपके होते हैं, जिससे Liver पर उनके निशान (Impressions) बन जाते हैं:
+                                <strong>Stomach:</strong> पेट (बायीं तरफ)।
+                                <strong>Gallbladder:</strong> पित्ताशय (दाहिनी तरफ)।
+                                <strong>Kidney:</strong> Right Kidney इसके ठीक पीछे होती है।
+                                <strong>Intestine:</strong> बड़ी आंत का हिस्सा।
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="info-card" style="background: #fffbeb; border-color: #fbbf24;">
+                        <h4>💡 Clinical Note: Liver Biopsy</h4>
+                        <p>जब डॉक्टर को Liver का टुकड़ा जाँच (Biopsy) के लिए निकालना होता है, तो वो सुई को <strong>पसलियों के बीच (Intercostal Space)</strong> से डालते हैं ताकि फेफड़ों को चोट न लगे।</p>
+                    </div>
+                </div>
+
+                <div class="side-column">
+                    <!-- Diagram Placeholder 1 -->
+                    <div class="img-container">
+                        <img src="https://images.nagwa.com/figures/explainers/353190259376/1.svg" alt="Abdomen Anatomy">
+                        <div class="img-caption">Fig 1: Liver की स्थिति (Location)</div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Diagrammatic Map 🧭</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center; font-size: 12px;">
+                            <div style="grid-column: 2; background: #e0f2fe; padding: 10px; border-radius: 8px;"><strong>Diaphragm</strong><br>(ऊपर)</div>
+                            <div style="grid-column: 1; grid-row: 2; background: #fce7f3; padding: 10px; border-radius: 8px;"><strong>Stomach</strong><br>(Left)</div>
+                            <div style="grid-column: 2; grid-row: 2; border: 2px solid var(--primary); padding: 15px; border-radius: 8px; font-weight: bold;">LIVER<br>(Center)</div>
+                            <div style="grid-column: 3; grid-row: 2; background: #fce7f3; padding: 10px; border-radius: 8px;"><strong>Kidney</strong><br>(Right)</div>
+                            <div style="grid-column: 2; grid-row: 3; background: #dcfce7; padding: 10px; border-radius: 8px;"><strong>Gallbladder</strong><br>(नीचे)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-footer">
+                <div class="footer-tag">🎯 अंगों के निशान</div>
+                <div class="footer-tag">🏥 Biopsy Site</div>
+                <div class="footer-tag">🧩 Anatomical Map</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 3: LOBES OF LIVER ==================== -->
+        <section class="slide">
+            <div class="slide-number">3 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Parts of Liver 🎗️<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">हिस्से और बनावट (Lobes)</span></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Anatomical Lobes (Liver के भाग)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">1️⃣</span>Right Lobe (दायां हिस्सा)</div>
+                            <div class="point-list">
+                                यह Liver का सबसे बड़ा हिस्सा है (पूरे Liver का 5/6th भाग)।
+                                इसके पीछे की तरफ दो छोटे हिस्से और होते हैं: Caudate और Quadrate।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">2️⃣</span>Left Lobe (बायां हिस्सा)</div>
+                            <div class="point-list">
+                                यह हिस्सा छोटा और चपटा होता है।
+                                यह पेट (Stomach) के ऊपर की तरफ फैला होता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🎗️</span>Ligaments (रस्सियां)</div>
+                            <div class="point-list">
+                                Liver को अपनी जगह पर टिकाए रखने के लिए कुछ 'रस्सियां' होती हैं जिन्हें Ligaments कहते हैं।
+                                <strong>Falciform Ligament:</strong> यह Right और Left हिस्से को बीच से अलग करता है।
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="side-column">
+                    <!-- Diagram Placeholder 2 -->
+                    <div class="img-container">
+                        <img src="https://cdn.lecturio.com/assets/Liver-Social-Sharing.jpg" alt="Liver Lobes">
+                        <div class="img-caption">Fig 2: Liver के Lobes (Gray's Anatomy)</div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Porta Hepatis (Main Gate) 🚪</h4>
+                        <p>Liver के नीचे एक 'Main Gate' होता है जहाँ से नसों का आना-जाना होता है:</p>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-title">Portal Vein</div>
+                                <div style="font-size: 13px;">खाना लेकर अंदर आती है (Entry)</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">Hepatic Artery</div>
+                                <div style="font-size: 13px;">Oxygen लेकर अंदर आती है (Entry)</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-title">Hepatic Duct</div>
+                                <div style="font-size: 13px;">Bile (पित्त) लेकर बाहर जाती है (Exit)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🏢 4 Lobes</div>
+                <div class="footer-tag">🚪 Main Gate</div>
+                <div class="footer-tag">🏗️ Ligaments</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 4: MICROSCOPIC STRUCTURE ==================== -->
+        <section class="slide">
+            <div class="slide-number">4 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Inside the Factory 🔬<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">सूक्ष्म संरचना (Microscopic View)</span></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Hepatic Lobule (काम करने वाली यूनिट)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🛑</span>Structure (बनावट)</div>
+                            <div class="point-list">
+                                अगर हम माइक्रोस्कोप से देखें, तो Liver लाखों छोटी-छोटी इकाइयों से बना है जिन्हें <strong>Hepatic Lobules</strong> कहते हैं।
+                                ये मधुमक्खी के छत्ते की तरह षट्कोणीय (Hexagonal) होते हैं।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🎯</span>Central Vein (नाली)</div>
+                            <div class="point-list">
+                                हर Lobule के बिल्कुल बीच में एक पाइप होता है जिसे <strong>Central Vein</strong> कहते हैं।
+                                सफाई के बाद सारा खून इसी में इकट्ठा होकर Heart की तरफ जाता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧱</span>Hepatocytes (Workers)</div>
+                            <div class="point-list">
+                                इन Lobules के अंदर Liver की कोशिकाएं (Cells) किसी पहिये की तिल्लियों की तरह सजी होती हैं।
+                                इन्हें <strong>Hepatocytes</strong> कहते हैं।
+                                यही Cells असली "Workers" हैं जो सारा काम करती हैं।
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="side-column">
+                    <!-- Diagram Placeholder 3 -->
+                    <div class="img-container">
+                        <img src="https://cdn.prod.website-files.com/621e95f9ac30687a56e4297e/64a8d5e2505cf8e707054857_V2_1675983263436_e3bebc06-7fc2-4ada-8141-930433a715a3.png" alt="Hepatic Lobule">
+                        <div class="img-caption">Fig 3: Hepatic Lobule (षट्कोणीय संरचना)</div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Portal Triad (तीन पाइप) 🔺</h4>
+                        <p>हर Hexagon के कोने पर 3 पाइपों का सेट होता है:</p>
+                        <table class="mini-table">
+                            <tr>
+                                <th>Name</th>
+                                <th>Function (काम)</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Portal Vein</strong></td>
+                                <td>पोषक तत्वों वाला खून लाती है</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hepatic Artery</strong></td>
+                                <td>Oxygen वाला खून लाती है</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bile Duct</strong></td>
+                                <td>Bile को बाहर ले जाती है</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🔬 Hepatic Lobule</div>
+                <div class="footer-tag">👷 Hepatocytes</div>
+                <div class="footer-tag">🩸 खून का बहाव</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 5: SINUSOIDS & KUPFFER CELLS ==================== -->
+        <section class="slide">
+            <div class="slide-number">5 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Security & Cleaning 🛡️<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">रक्त नलिकाएं और सुरक्षा</span></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Vascular System (खून की गलियाँ)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🌊</span>Sinusoids (साइनसॉइड्स)</div>
+                            <div class="point-list">
+                                Liver Cells के बीच में खून बहने के लिए विशेष गलियाँ होती हैं जिन्हें <strong>Sinusoids</strong> कहते हैं।
+                                यहाँ शुद्ध (Arterial) और अशुद्ध (Venous) खून आपस में मिल जाते हैं।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">👮</span>Kupffer Cells (Security Guards)</div>
+                            <div class="point-list">
+                                इन गलियों की दीवारों पर खास "Security Guards" बैठे होते हैं जिन्हें <strong>Kupffer Cells</strong> कहते हैं।
+                                इनका काम खून में आए बैक्टीरिया और कचरे को पकड़कर खा जाना (Phagocytosis) है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🌌</span>Space of Disse (एक्सचेंज ज़ोन)</div>
+                            <div class="point-list">
+                                खून की गली और Liver Cell के बीच में थोड़ा खाली गैप होता है।
+                                यहीं से पोषक तत्व (Nutrients) खून से निकलकर Cell के पास जाते हैं।
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Cell Distribution (कौन कितना है?) 📊</h4>
+                        <div class="stat-box" style="margin-bottom: 10px; padding: 15px;">
+                            <span class="stat-val" style="font-size: 24px;">60%</span>
+                            <span class="stat-lbl">Hepatocytes (Workers)</span>
+                        </div>
+                        <div class="stat-box" style="margin-bottom: 10px; padding: 15px;">
+                            <span class="stat-val" style="font-size: 24px;">Immune</span>
+                            <span class="stat-lbl">Kupffer Cells (Guards)</span>
+                        </div>
+                        <div class="stat-box" style="padding: 15px;">
+                            <span class="stat-val" style="font-size: 24px;">Storage</span>
+                            <span class="stat-lbl">Ito Cells (Vitamin A)</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card grow">
+                        <h4>Immune Role (सुरक्षा) ⚔️</h4>
+                        <p>Liver एक <strong>छलनी (Filter)</strong> की तरह काम करता है। आंतों से आने वाले खून को यह साफ करता है ताकि बैक्टीरिया शरीर के बाकी हिस्सों में न फैलें।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🛡️ Security Guards</div>
+                <div class="footer-tag">🌊 Sinusoids</div>
+                <div class="footer-tag">🌌 Space of Disse</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 6: METABOLIC FUNCTIONS (CARBS/PROTEIN) ==================== -->
+        <section class="slide">
+            <div class="slide-number">6 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Factory Work: Part 1 ⚡<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">Carbs & Proteins का काम</span></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Carbohydrate Metabolism</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🍭</span>Glucose Regulation (शुगर कंट्रोल)</div>
+                            <div class="point-list">
+                                Liver खून में Sugar (Glucose) के लेवल को कंट्रोल करता है।
+                                <strong>ज्यादा होने पर:</strong> उसे <strong>Glycogen</strong> बनाकर स्टोर कर लेता है (जैसे बैंक में पैसा जमा करना)।
+                                <strong>कम होने पर:</strong> उसी Glycogen को वापस Glucose में बदलकर खून में भेज देता है।
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3>Protein Metabolism</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🗑️</span>Ammonia Removal (सफाई)</div>
+                            <div class="point-list">
+                                प्रोटीन के टूटने से शरीर में एक जहरीली गैस <strong>Ammonia</strong> बनती है।
+                                Liver इसे कम जहरीले <strong>Urea</strong> में बदल देता है, जो बाद में पेशाब (Urine) के रास्ते बाहर निकल जाता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🏗️</span>Protein Synthesis (निर्माण)</div>
+                            <div class="point-list">
+                                Liver खून के लिए जरूरी प्रोटीन्स बनाता है:
+                                • <strong>Albumin:</strong> जो नसों में पानी को रोके रखता है।
+                                • <strong>Clotting Factors:</strong> जो चोट लगने पर खून को जमाने में मदद करते हैं।
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Urea Cycle (सफाई अभियान) 🔄</h4>
+                        <div class="flow-chart">
+                            <div class="flow-step">Ammonia (जहरीला)</div>
+                            <div class="flow-step">Liver में सफाई</div>
+                            <div class="flow-step">Urea (सुरक्षित)</div>
+                            <div class="flow-step">Kidney द्वारा बाहर</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card grow">
+                        <h4>Clinical Significance ⚠️</h4>
+                        <p>अगर Liver काम करना बंद कर दे, तो खून में Ammonia बढ़ जाता है। यह दिमाग पर असर करता है जिससे इंसान कोमा (Coma) में जा सकता है।</p>
+                        <div class="badge" style="margin-top: 10px; background: #fee2e2; color: #ef4444;">Clinical Alert</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🍭 Energy Storage</div>
+                <div class="footer-tag">🔄 Urea Cycle</div>
+                <div class="footer-tag">🩸 Clotting Proteins</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 7: FAT METABOLISM & DETOX ==================== -->
+        <section class="slide">
+            <div class="slide-number">7 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Factory Work: Part 2 💊<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">Fat & Detoxification</span></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Lipid (Fat) Metabolism</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🔥</span>Energy Production (ऊर्जा)</div>
+                            <div class="point-list">
+                                Liver फैट (Fat) को तोड़कर एनर्जी बनाता है।
+                                अगर हम ज्यादा मीठा खाते हैं, तो Liver उसे भी Fat में बदल देता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧈</span>Cholesterol बनाना</div>
+                            <div class="point-list">
+                                <strong>Cholesterol:</strong> Liver शरीर के लिए जरूरी 'अच्छा कोलेस्ट्रॉल' बनाता है जो सेल्स और हार्मोन्स के लिए जरूरी है।
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3>Detoxification (जहर निकालना)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🛡️</span>Cleaning (सफाई)</div>
+                            <div class="point-list">
+                                Liver खून में मौजूद दवाओं (Medicines), अल्कोहल और दूसरे जहरीले पदार्थों को निष्क्रिय (Neutralize) कर देता है।
+                                यह उन्हें पानी में घुलने लायक बना देता है ताकि वो शरीर से आसानी से बाहर निकल सकें।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🌡️</span>Thermogenesis (गर्मी)</div>
+                            <div class="point-list">
+                                Liver में इतना काम चलता रहता है कि यह बहुत गर्म रहता है।
+                                यह शरीर के तापमान (Body Temperature) को बनाए रखने में मदद करता है।
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Storage Functions (गोदाम) 📦</h4>
+                        <p>Liver इन चीजों को जमा करके रखता है:</p>
+                        <div class="badge-grid">
+                            <div class="badge">Glycogen</div>
+                            <div class="badge">Iron (लोहा)</div>
+                            <div class="badge">Vit A (सालों तक)</div>
+                            <div class="badge">Vit D (महीनों तक)</div>
+                            <div class="badge">Vit B12 (सालों तक)</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card grow">
+                        <h4>Detox Mechanism 🏭</h4>
+                        <table class="mini-table">
+                            <tr>
+                                <td><strong>Phase I</strong></td>
+                                <td>तोड़फोड़ करना (Breakdown)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phase II</strong></td>
+                                <td>टैग लगाना (Conjugation)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Excretion</strong></td>
+                                <td>बाहर फेंकना (Removal)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🧈 Cholesterol</div>
+                <div class="footer-tag">💊 Drug Detox</div>
+                <div class="footer-tag">📦 Vitamin Storage</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 8: BILE COMPOSITION ==================== -->
+        <section class="slide">
+            <div class="slide-number">8 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Bile (पित्त) 🟢<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">संघटन और गुण (Composition)</span></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>General Properties (सामान्य गुण)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🧪</span>Characteristics (पहचान)</div>
+                            <div class="point-list">
+                                <strong>रंग:</strong> यह हरे-पीले रंग का कड़वा पानी होता है।
+                                <strong>pH:</strong> यह Alkaline (क्षारीय) होता है, यानी एसिड का उल्टा।
+                                <strong>मात्रा:</strong> Liver रोज़ाना लगभग 500ml से 1 लीटर Bile बनाता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">💧</span>Chemical Composition (इसमें क्या है?)</div>
+                            <div class="point-list">
+                                <strong>Water:</strong> 97% तो सिर्फ पानी है।
+                                <strong>Solids:</strong> बाकी 3% में Bile Salts, Pigments और Cholesterol होता है।
+                                <strong>NO ENZYMES:</strong> इसमें खाना पचाने वाला कोई एंजाइम नहीं होता, फिर भी यह Fat पचाने के लिए बहुत जरूरी है।
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="info-card" style="background: #f0fdf4; border-color: #86efac;">
+                        <h4>🤔 यह Alkaline क्यों है?</h4>
+                        <p>पेट से जो खाना आता है वो Acidic (तेजाबी) होता है। Bile उसे न्यूट्रल (शांत) करता है ताकि आगे का पाचन हो सके।</p>
+                    </div>
+                </div>
+
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Composition Chart</h4>
+                        <div style="position: relative; width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(#3b82f6 0% 97%, #22c55e 97% 100%); margin: 20px auto;">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">Water<br>97%</div>
+                        </div>
+                        <div style="text-align: center; font-size: 14px;">
+                            <span style="color: #3b82f6;">● पानी</span> &nbsp;
+                            <span style="color: #22c55e;">● ठोस पदार्थ</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>Role of Gallbladder</h4>
+                        <p>Liver जो Bile बनाता है, वो Gallbladder में जमा होता है। Gallbladder उसका पानी सोखकर उसे <strong>10 गुना गाढ़ा</strong> कर देता है।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🟢 Alkaline Fluid</div>
+                <div class="footer-tag">💧 Neutralization</div>
+                <div class="footer-tag">📊 1 लीटर रोज़ाना</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 9: BILE SALTS & PIGMENTS ==================== -->
+        <section class="slide">
+            <div class="slide-number">9 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Salts & Pigments 🧪<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">सक्रिय घटक (Active Components)</span></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Bile Salts (शरीर का डिटर्जेंट)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🧂</span>Nature (प्रकृति)</div>
+                            <div class="point-list">
+                                ये Cholesterol से बनते हैं (जैसे Sodium Taurocholate)।
+                                इनका काम साबुन जैसा होता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🧼</span>Emulsification (पायसीकरण)</div>
+                            <div class="point-list">
+                                Bile Salts तेल/घी (Fat) की बड़ी बूंदों को तोड़कर छोटी-छोटी बूंदों (Micelles) में बदल देते हैं।
+                                इससे शरीर उन्हें आसानी से पचा पाता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">♻️</span>Recycling (पुनर्चक्रण)</div>
+                            <div class="point-list">
+                                हमारा शरीर बहुत समझदार है। 95% Bile Salts को आंतों से वापस सोख लिया जाता है और दोबारा Liver में भेज दिया जाता है।
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3>Bile Pigments (रंग/कचरा)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🎨</span>Bilirubin (पीला रंग)</div>
+                            <div class="point-list">
+                                जब खून की पुरानी Cells (RBCs) टूटती हैं, तो उनसे एक पीला कचरा निकलता है जिसे <strong>Bilirubin</strong> कहते हैं।
+                                यह मल (Stool) के रास्ते बाहर निकलता है, जिससे मल का रंग भूरा/पीला होता है।
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="side-column">
+                    <!-- Diagram Placeholder 4 -->
+                    <div class="img-container">
+                        <img src="https://teachmeanatomy.info/wp-content/uploads/Overview-of-the-Biliary-System.jpg" alt="Biliary System">
+                        <div class="img-caption">Fig 4: Biliary System (पित्त तंत्र)</div>
+                    </div>
+
+                    <div class="info-card grow">
+                        <h4>Jaundice (पीलिया) ⚠️</h4>
+                        <p>अगर Liver इस पीले कचरे (Bilirubin) को बाहर नहीं निकाल पाता, तो यह खून में जमा हो जाता है और आँखें/त्वचा पीली हो जाती हैं।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🧼 Fat तोड़ना</div>
+                <div class="footer-tag">♻️ Recycling</div>
+                <div class="footer-tag">🎨 पीलिया (Jaundice)</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 10: FUNCTIONS OF BILE ==================== -->
+        <section class="slide">
+            <div class="slide-number">10 / 11</div>
+            <div class="slide-header">
+                <div class="brand">Prepe</div>
+                <div class="slide-title">Functions of Bile ⚙️<br><span style="font-size: 20px; color: var(--text-medium); font-weight: 500;">पित्त के कार्य (Physiological Roles)</span></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="main-column">
+                    <h3>Digestion & Absorption (पाचन)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🍔</span>Fat Digestion</div>
+                            <div class="point-list">
+                                Bile के बिना हम Fat (तेल/घी) को नहीं पचा सकते।
+                                यह Fat को पानी में घुलने लायक बनाता है।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">🥕</span>Vitamin Absorption</div>
+                            <div class="point-list">
+                                यह <strong>Fat-Soluble Vitamins</strong> (A, D, E, K) को सोखने में मदद करता है।
+                                इसके बिना ये विटामिन्स शरीर में नहीं जा सकते।
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3>Excretion (सफाई)</h3>
+                    <ul>
+                        <li>
+                            <div class="point-title"><span class="icon">🗑️</span>Waste Removal</div>
+                            <div class="point-list">
+                                Liver खून की गंदगी को Bile में डाल देता है, जैसे:
+                                • भारी धातुएं (Heavy Metals)।
+                                • एक्स्ट्रा कोलेस्ट्रॉल।
+                                • दवाइयों का कचरा।
+                            </div>
+                        </li>
+                        <li>
+                            <div class="point-title"><span class="icon">〰️</span>Peristalsis (पेट साफ रखना)</div>
+                            <div class="point-list">
+                                Bile आंतों की गति को बढ़ाता है, जिससे खाना आगे बढ़ता रहता है और कब्ज (Constipation) नहीं होता।
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="side-column">
+                    <div class="info-card">
+                        <h4>Summary Table 📝</h4>
+                        <table class="mini-table">
+                            <tr>
+                                <th>Component</th>
+                                <th>Main Function</th>
+                            </tr>
+                            <tr>
+                                <td>Bile Salts</td>
+                                <td>Fat को तोड़ना (Digestion)</td>
+                             मल
+                            </tr>
+                            <tr>
+                                <td>Bicarbonate</td>
+                                <td>Acid को शांत करना</td>
+                            </tr>
+                            <tr>
+                                <td>Bilirubin</td>
+                                <td>कचरा बाहर निकालना</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="info-card grow">
+                        <h4>Gallstones (पथरी) 💎</h4>
+                        <p>अगर Bile में Cholesterol ज्यादा हो जाए और Bile Salts कम हो जाएं, तो Cholesterol जमने लगता है और पत्थर (Stones) बन जाते हैं।</p>
+                        <div class="badge" style="margin-top: 10px; background: #fef3c7;">मोटे लोगों में ज्यादा खतरा होता है</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <div class="footer-tag">🍔 Fat Digestion</div>
+                <div class="footer-tag">💊 Vitamin Absorption</div>
+                <div class="footer-tag">🗑️ सफाई (Excretion)</div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 11: FINAL SLIDE ==================== -->
+        <section class="slide final-slide">
+            <div class="slide-number">11 / 11</div>
+            <div class="final-box">
+                <div style="margin-bottom: 20px;">
+                    <h2 style="color: #7c3aed; margin-bottom: 10px; font-size: 28px;">Prepe Complete Notes</h2>
+                    <h3 style="font-size: 42px; margin: 0; color: var(--text-dark);">Revision Complete! ✅</h3>
+                </div>
+                
+                <p style="font-size: 18px; color: var(--text-medium); margin-bottom: 30px;">
+                    आपने Liver की Anatomy और Physiology को बहुत ही सरल भाषा में समझ लिया है।
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; text-align: left;">
+                    <a href="https://offer.prepeai.in" target="_blank" style="text-decoration: none; color: inherit;">
+                        <div class="info-card" style="height: 100%; border-left: 5px solid #22c55e; transition: transform 0.2s;">
+                            <h4 style="color: #22c55e;">🎁 Special Offer</h4>
+                            <p>Full Course पर 50% की छूट प्राप्त करें</p>
+                        </div>
+                    </a>
+                    <a href="https://shop.prepeai.in" target="_blank" style="text-decoration: none; color: inherit;">
+                        <div class="info-card" style="height: 100%; border-left: 5px solid #3b82f6; transition: transform 0.2s;">
+                            <h4 style="color: #3b82f6;">📚 More Notes</h4>
+                            <p>अन्य विषयों के नोट्स देखें</p>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="https://www.prepeai.in" target="_blank" style="
+                    display: inline-block;
+                    background: linear-gradient(90deg, var(--secondary), var(--primary));
+                    color: white;
+                    padding: 18px 40px;
+                    border-radius: 12px;
+                    text-decoration: none;
+                    font-weight: 800;
+                    font-size: 20px;
+                    box-shadow: 0 10px 20px -5px rgba(234, 88, 12, 0.4);
+                    transition: transform 0.2s;
+                ">वेबसाइट पर जाएं</a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
